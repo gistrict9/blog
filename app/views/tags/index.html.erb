@@ -1,0 +1,12 @@
+<% title "Tags" %>
+<% description "Article tag list for ProductionQA" %>
+
+<div>
+	<h3>Tags</h3>
+	<hr />
+	<ul class="list-unstyled">
+		<% @tags.each do |tag| %>
+			<li><span class="tag-count">(<%= tag.taggings_count %>)</span> <%= link_to tag.name.titleize, tag_path(tag.name), class: "btn btn-default tag" %></li>
+		<% end %>
+	</ul>
+</div>

@@ -1,0 +1,35 @@
+//= Search
+//
+
+.search-box {
+	width      : 175px;
+	height     : 37px;
+	margin-left: 35px;
+}
+
+@media(max-width: 768px) {
+	.search-box {
+		margin-left: 0;
+	}
+}
+
+// Tags
+//
+
+.filter-tag {
+	margin-bottom: 25px;
+}
+
+.btn-filter-tag {
+	@extend .btn;
+	@extend .btn-default;
+	&:hover {
+		background-color: transparent;
+		border-color    : #ccc;
+		cursor          : default;
+	}
+}
+
+.remove-tag {
+	margin-left: 8px;
+}

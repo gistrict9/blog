@@ -1,0 +1,76 @@
+//== Type
+//
+
+// Fonts
+//
+
+// Logo
+//
+
+.logo-text {
+	font-family: "ff-dagny-web-pro", sans-serif;
+	font-style: normal;
+	font-weight: 700;
+
+	a {
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+
+// Colors
+//
+
+.brand-primary {
+	color: $brand-primary;
+}
+
+.brand-secondary {
+	color: $brand-secondary;
+}
+
+// Links
+//
+
+.secondary-link {
+	color: $gray;
+
+	&:hover {
+		color: $gray;		
+	}
+}
+
+// Articles
+//
+
+article > h1,h2,h3,h4,h5,h6 {
+	font-family: "jaf-bernino-sans", sans-serif;
+	font-style : normal;
+	font-weight: 700;
+}
+
+article > .article-content {
+	font-family: "ff-dagny-web-pro", sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: $font-size-base * 1.6;
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+	color: $gray;
+}
+
+.article-content > p, blockquote {
+	margin-bottom: 25px;
+}
+
+.article-content > .gist {
+	font-size: 16px;
+}
+
+// Helpers
+//
+
+.strong {
+	font-weight: 700;
+}

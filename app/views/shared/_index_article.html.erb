@@ -1,0 +1,25 @@
+<div class="row">
+	<div class="col-md-9">
+		<% @articles.each do |article| %>
+		  <div class="article">
+			  <div class="title">
+			    <h3 data-no-turbolink><%= link_to article.title, article, class: "title-a" %></h3>
+			  </div>
+			  <div class="title-supplements">
+			  	<em>
+				  	<ul class="list-unstyled list-inline sub-heading">
+					    <li><%= article.user.full_name %></li>
+					    <li><%= article.published_at.strftime('%B %-d, %Y') %></li>
+					    <!-- # of comments -->
+				    </ul>
+			  	</em>
+			  </div>
+		  </div>
+		<% end %>
+	</div>
+	<div class="col-md-3"></div>
+</div>
+
+<%= "No articles matching your search were found." if @articles.count === 0 %>
+
+<%= paginate @articles %>

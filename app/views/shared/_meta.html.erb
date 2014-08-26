@@ -1,0 +1,24 @@
+<!-- Page title -->
+<title><%= yield(:title) %> - ProductionQA</title>
+
+<% if controller_name === 'articles' && action_name === 'show' %>
+	<meta property="og:title" content="<%= article.title %>" />
+<% else %>
+	<meta property="og:title" content="<%= yield(:title) %>" />
+<% end %>
+
+
+<!-- OG (Open Graph) objects -->
+<meta property="og:description" content="<%= yield(:description) %>" />
+<meta property="og:site_name" content="ProductionQA" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="<%= request.original_url %>" />
+<meta property="og:image" content="https://s3.amazonaws.com/md-content-storage/blog_images/productionqa/productionqa.png" />
+
+<!-- Article specific OG objects -->
+<% if controller_name === 'articles' && action_name === 'show' %>
+	<meta property="article:published_time" content="<%= article.published_at %>">
+	<meta property="article:modified_time" content="<%= article.updated_at %>">
+	<meta property="article:author" content="<%= article.user.full_name %>">
+	<meta property="article:tag" content="<%= article.tag_list.first.titleize %>">
+<% end %>

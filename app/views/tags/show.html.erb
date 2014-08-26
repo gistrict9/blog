@@ -1,0 +1,8 @@
+<% title "#{@tag.titleize} Articles"  %>
+<% description "Articles that contain content relating to #{@tag.titleize}" %>
+
+<div class="filter-tag">
+	<div class="btn-filter-tag"><%= @tag.titleize %></div>
+	<span class="remove-tag"><%= link_to 'Clear', root_path %></span>
+</div>
+<%= render partial: "shared/index_article" %>

@@ -1,0 +1,29 @@
+<div class="navbar row">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" style="width: 100%;" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">Menu</button>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="row">
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul id="navigation" class="nav nav-pills">
+
+          <!-- Search -->
+          <% if controller_name === 'articles' && action_name === 'index' %>
+            <li class="pull-right">
+              <%= form_tag articles_path, method: :get do %>
+                <%= text_field_tag :search, params[:search], placeholder: "Search", class: "form-control search-box" %>
+              <% end %>
+            </li>
+          <% end %>
+
+          <!-- Main links -->
+          <li class="pull-right mobile-btn"><%= link_to 'Tags', tags_path %></a></li>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

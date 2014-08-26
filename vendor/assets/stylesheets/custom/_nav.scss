@@ -1,0 +1,68 @@
+//= Navigation
+//------------------
+
+// Main Nav
+//
+// override to use H1 alignment
+
+h1 > .navigation {
+	font-size: $font-size-base;
+	font-weight: normal;
+}
+
+// Pills
+//
+// override to get starting border
+
+.nav-pills > li > a {
+	border: 1px solid #ccc;
+}
+
+@media(max-width: 768px) {
+	.nav-pills > li > a {
+		width: 63px;
+	}
+}
+
+// Mobile Nav
+//
+//
+
+.navbar {
+	min-height   : 0;
+	margin-bottom: 0;
+}
+
+.container-fluid > .navbar-header {
+	margin-left : 0;
+	margin-right: 0;
+}
+
+.navbar-toggle {
+	float: left;
+	border: 1px solid #ccc;
+	background-color: #f8f8f8;
+}
+
+.mobile-stacked {
+	margin-bottom: 10px;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+// Nav top
+//
+
+ul#nav-top {
+	margin-bottom: 0;  // override bootstrap ul
+
+	li {
+		padding-right: 0;
+	}
+}
+
+.btn-back {
+	margin: 8px 0 8px 0;
+}
